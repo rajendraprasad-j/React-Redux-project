@@ -3,7 +3,7 @@ import {syncHistoryWithStore} from 'react-router-redux';
 
 import rootReducer from './reducers/index';
 
-import products from './data/products';
+import  products from './data/products';
 
 const defaultState={products};
 

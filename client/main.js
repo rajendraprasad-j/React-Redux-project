@@ -1,7 +1,14 @@
 
 import React from 'react';
-import {Navbar,NavItem,Nav,NavDropdown,MenuItem,Button} from 'react-bootstrap'
+import {Navbar,NavItem,Nav,NavDropdown,MenuItem,Button} from 'react-bootstrap';
+import {fetchPostsIfNeeded} from './actions/actionCreater'
+
 export default class Main extends React.Component{
+     componentDidMount() {
+         console.log("dsdss")
+    const {products} = this.props
+        fetchPostsIfNeeded(products)
+    }
     render(){
         return    (
                     <div>
