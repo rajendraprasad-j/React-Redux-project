@@ -7,14 +7,18 @@ import Product from './components/product';
 import PhotoGrid from './components/displayProduct';
 import css from './style.styl';
 import {Provider} from 'react-redux'
-import store from './store'
+import {configureStore}  from './store'
+import Cart from './components/cart'
 import App from './app'
+const store = configureStore()
+
 const test=(
     <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={App}>
                 <IndexRoute component={Product}></IndexRoute>
-                <Route path="/view/:productId" component={PhotoGrid} ></Route> 
+                <Route path="/Products/view/:productId" component={PhotoGrid} ></Route> 
+                <Route path="/cart" component={Cart} ></Route> 
             </Route>
         </Router>
     </Provider>
